@@ -95,7 +95,7 @@ describe('ZipWith', () => {
 		const expected = [[1, 2, 3], [1, 1, 1]]
 		expect(actual).toEqual(expected)
 	});
-	test('should implement an addition function with the arrays', () => {
+	test.only('should implement an addition function with the arrays', () => {
 		const arr1 = [1, 2, 3]
 		const arr2 = [1, 1, 1]
 		const plus = function (a, b) {
