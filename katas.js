@@ -84,13 +84,28 @@ function golfScore(par, strokes) {
 // zipWith( (a,b) => a+b,                  [0,1,2,3], [0,1,2,3] )  =>  [0,2,4,6]  // Both are functions
 // Input validation
 // Assume all input is valid.
- const zipWith = (func, array1, array2) => {
-//!! put the 2 arrays (i.e array1 and array2) in another array to make a nested array.
-//TODOS Loop though the nested array
-//!! implement the passed function with the 2 arrays 
+const zipWith = (func, array1, array2) => {
+	//!! put the 2 arrays (i.e array1 and array2) in another array to make a nested array.
+	//TODOS Loop though the nested array
+	//!! implement the passed function with the 2 arrays
 
-const nestedArray = [array1,array2]
-return nestedArray
- }
+	const nestedArray = [array1, array2];
+	const result = []
+	for (let i = 0; i < nestedArray.length; i++){
+		for (let j = 0; j < nestedArray[i].length; j++){
+			// console.log(nestedArray[0][j] + nestedArray[1][j]);
+			 result.push(func(nestedArray[0][j],nestedArray[1][j]))
+			
+		}
+	}
+	
+	return nestedArray;
+};
 
-module.exports = { arrayFlattener, zooInventory, removeColumns, golfScore, zipWith };
+module.exports = {
+	arrayFlattener,
+	zooInventory,
+	removeColumns,
+	golfScore,
+	zipWith,
+};
