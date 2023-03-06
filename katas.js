@@ -93,12 +93,12 @@ const zipWith = (func, array1, array2) => {
 	const result = []
 	for (let i = 0; i < nestedArray.length; i++){
 		for (let j = 0; j < nestedArray[i].length; j++){
-			// console.log(nestedArray[0][j] + nestedArray[1][j]);
-			 result.push(func(nestedArray[0][j],nestedArray[1][j]))
 			
+			
+			result.push(func(nestedArray[0][j],nestedArray[1][j]))
 		}
 	}
-	
+	console.log(result);
 	return nestedArray;
 };
 
