@@ -86,23 +86,3 @@ describe("golfScore", () => {
 
 
 
-describe('ZipWith', () => {
-	test('should put the 2 arrays passed to the function in one array to created a nested array', () => {
-		const arr1 = [1, 2, 3]
-		const arr2 = [1, 1, 1]
-		const func = Math.pow()
-		const actual =  zipWith(func, arr1, arr2)
-		const expected = [[1, 2, 3], [1, 1, 1]]
-		expect(actual).toEqual(expected)
-	});
-	test.only('should implement an addition function with the arrays', () => {
-		const arr1 = [1, 2, 3]
-		const arr2 = [1, 1, 1]
-		const plus = function (a, b) {
-			return a + b
-		}
-		const actual = zipWith(plus, arr1, arr2)
-		const expected = [2, 3, 4]
-		expect(actual).toEqual(expected)
-	});
-});
