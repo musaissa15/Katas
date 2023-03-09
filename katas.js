@@ -49,9 +49,6 @@ function removeColumns(originalGrid, numColums) {
 }
 
 function golfScore(par, strokes) {
-	if (Math.abs(strokes - par) === 2) {
-		// console.log("it is ");
-	}
 	return strokes - par === 2
 		? "Double Bogey"
 		: par && strokes === par - 1
@@ -67,13 +64,22 @@ function golfScore(par, strokes) {
 		: null;
 }
 
+const descendingOrder = (num) => {
+	const strNum = num.toString().split("");
 
+	const numSeperatedInArr = strNum.map(Number);
 
+	const SortedNum = numSeperatedInArr.sort((a, b) => b - a);
+
+	const result = SortedNum.reduce((accum, digit) => accum * 10 + digit, 0);
+
+	return result;
+};
 
 module.exports = {
 	arrayFlattener,
 	zooInventory,
 	removeColumns,
 	golfScore,
-	zipWith,
+	descendingOrder,
 };

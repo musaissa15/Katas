@@ -2,7 +2,7 @@ const {
 	arrayFlattener,
 	zooInventory,
 	removeColumns,
-	golfScore,zipWith
+	golfScore,descendingOrder
 } = require("./katas.js");
 
 describe("arrayFlattener", () => {
@@ -85,4 +85,43 @@ describe("golfScore", () => {
 });
 
 
+describe('A function called descendingOrder takes any non-negative integer as an argument and returns it with its digits in descending order', () => {
+	test('descendingOrder should return a number', () => {
+		const num  = 2
+		expect(typeof(descendingOrder(num))).toBe('number')
+	});
+	test(' Should return the argument passed if it is single digit', () => {
+		const num = 3
+		const actual = descendingOrder(num)
+		const expected = 3
+		expect(actual).toBe(expected)
+	});
+	test('should return 51 when 15 is passed to the function as an argument', () => {
+		const num = 15
+		const actual = descendingOrder(num)
+		const expected = 51
+		expect(actual).toBe(expected)
+	});
 
+	test('should return 11 when 11 is passed to the function as an argument', () => {
+		const num = 11
+		const actual = descendingOrder(num)
+		const expected = 11
+		expect(actual).toBe(expected)
+	});
+
+	
+	test('should return 111 when 111 is passed to the function as an argument', () => {
+		const num = 111
+		const actual = descendingOrder(num)
+		const expected = 111
+		expect(actual).toBe(expected)
+	});
+
+	test('should return 987654321 when 123456789 is passed to the function as an argument', () => {
+		const num = 123456789
+		const actual = descendingOrder(num)
+		const expected = 987654321
+		expect(actual).toBe(expected)
+	});
+});
