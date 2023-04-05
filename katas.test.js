@@ -2,7 +2,7 @@ const {
 	arrayFlattener,
 	zooInventory,
 	removeColumns,
-	golfScore,descendingOrder
+	golfScore,descendingOrder, zipWith
 } = require("./katas.js");
 
 describe("arrayFlattener", () => {
@@ -123,5 +123,19 @@ describe('A function called descendingOrder takes any non-negative integer as an
 		const actual = descendingOrder(num)
 		const expected = 987654321
 		expect(actual).toBe(expected)
+	});
+});
+
+describe('ZipWith', () => {
+	test('should return an array ', () => {
+		expect(zipWith()).toEqual([])
+	});
+	test('When passed Math.pow as a function, should apply function to every pair between the 2 arrays. i.e the first number in the first array to the first number to the second array ', () => {
+		const fn = Math.pow()
+		const arr1 = [10, 10, 10, 10]
+		const arr2 = [0, 1, 2, 3]
+		const actual = zipWith(fn, arr1, arr2)
+		const expected = [1e0, 1e1, 1e2, 1e3]
+		expect(actual).toEqual(expected)
 	});
 });
