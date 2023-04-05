@@ -76,10 +76,20 @@ const descendingOrder = (num) => {
 	return result;
 };
 
+const zipWith = (fn, arr1, arr2) => {
+	const nestedArr = [[...arr1], [...arr2]]
+	for(let i = 0; i < nestedArr.length; i++) {
+		for (let j = 0; j < nestedArr[i].length; j++){
+			console.log(nestedArr[i][j]);
+		}
+	}
+	console.log(nestedArr);
+	return []
+}
 module.exports = {
 	arrayFlattener,
 	zooInventory,
 	removeColumns,
 	golfScore,
-	descendingOrder,
+	descendingOrder,zipWith
 };
