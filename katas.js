@@ -26,7 +26,7 @@ function zooInventory(animals) {
 			age = animals[i][1];
 		}
 	}
-	// }
+	 
 	newArr.push(`${name} the ${type} is ${age}`);
 
 	return [newArr[0]];
